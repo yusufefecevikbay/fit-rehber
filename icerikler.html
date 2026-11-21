@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FitRehber Kütüphanesi: Kas gruplarına göre doğru egzersiz formları ve 15 dakikada hazırlanan yüksek proteinli pratik tarifler.">
+    <title>Kütüphane | FitRehber</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Ana Stil Dosyası -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Ortak Üst Menü (Header & Navbar) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand-logo" aria-label="FitRehber Ana Sayfa">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 6.5h11"></path>
+                        <path d="M6.5 17.5h11"></path>
+                        <path d="M12 6.5v11"></path>
+                        <rect x="2" y="8.5" width="3" height="7" rx="1"></rect>
+                        <rect x="19" y="8.5" width="3" height="7" rx="1"></rect>
+                    </svg>
+                </span>
+                <span class="brand-text">Fit<strong>Rehber</strong></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menüyü aç veya kapat"
+                aria-expanded="false" aria-controls="primaryNav">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+
+            <nav class="site-nav" id="primaryNav" aria-label="Ana Menü">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="icerikler.html" class="nav-link active" aria-current="page">Kütüphane</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sayfa Başlık Bandı -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="hero-badge">EGZERSİZ &amp; TARİF KÜTÜPHANESİ</span>
+                <h1 class="page-title">Antrenman ve Beslenme Kütüphanesi</h1>
+                <p class="page-subtitle">
+                    Kas grubuna, egzersiz adına veya malzeme içeriğine göre anında arama yap; doğru teknikleri ve yüksek
+                    proteinli pratik tarifleri tek ekranda incele.
+                </p>
+            </div>
+        </section>
+
+        <!-- Kütüphane İçerik Alanı -->
+        <div class="container library-container">
+            <!-- Arama ve Filtreleme Bölümü -->
+            <section class="search-area" aria-label="İçerik arama">
+                <label for="event-search">Egzersiz, kas grubu (omuz, sırt, göğüs...) veya tarif adına göre ara</label>
+                <div class="search-controls">
+                    <input id="event-search" type="search" placeholder="Örnek: Omuz, Fly, Sırt, Tavuk, Yulaf..."
+                        autocomplete="off">
+                    <button id="clear-search" type="button">Temizle</button>
+                </div>
+
+                <div class="filter-buttons" role="group" aria-label="Kategori filtresi">
+                    <button type="button" class="filter-btn active" data-filter="all">Tümü (16)</button>
+                    <button type="button" class="filter-btn" data-filter="egzersiz">Egzersizler (8)</button>
+                    <button type="button" class="filter-btn" data-filter="tarif">Yüksek Proteinli Tarifler (8)</button>
+                </div>
+
+                <p id="result-count" role="status" aria-live="polite">16 içerik gösteriliyor.</p>
+            </section>
+
+            <!-- Boş Sonuç Uyarısı -->
+            <p id="empty-message" hidden>Aramanıza uygun egzersiz veya tarif bulunamadı.</p>
+
+            <!-- Kart Listesi (16 Kart) -->
+            <section id="event-list" class="grid" aria-label="Egzersiz ve tarif kartları">
+
+                <!-- ================= 8 EGZERSİZ KARTI ================= -->
+
+                <!-- Kart 1 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80"
+                            alt="Dambıllarla omuz antrenmanı ve lateral raise hareketi uygulayan sporcu"
+                            class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • OMUZ</span>
+                        <h2 class="card-title">Lateral Raise ve Dumbbell Fly (Omuz)</h2>
+                        <p class="card-description">
+                            Yan omuz (lateral deltoid) kaslarını izole ederek omuzlara genişlik ve belirgin form
+                            kazandıran temel şekillendirme hareketleridir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Dirsekleri hafif bükülü sabitle, gövdeni dik tutarak
+                                dambılları omuz hizasına kadar kontrollü kaldır ve tepe noktada yarım saniye bekle.</p>
+                            <p><strong>En Sık Yapılan Hata:</strong> Gereğinden ağır kilo seçip belden savurma yapmak ve
+                                omuzları kulaklara doğru çekerek yükü trapeze bindirmek.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 2 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80"
+                            alt="Halter barı ile baş üstü omuz itişi yani overhead press yapan sporcu" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • OMUZ</span>
+                        <h2 class="card-title">Overhead Press (Omuz)</h2>
+                        <p class="card-description">
+                            Ön ve yan omuz kaslarıyla birlikte üst göğüs, triceps ve core bölgesini devreye sokan en
+                            güçlü bileşik omuz itiş egzersizidir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Karın ve kalça kaslarını sıkarak omurgayı kilitle, barı
+                                köprücük kemiği hizasından düz bir çizgide baş üstüne itip kulak hizasında bitir.</p>
+                            <p><strong>En Sık Yapılan Hata:</strong> İtiş sırasında beli aşırı geriye bükerek bel
+                                çukurunu artırmak ve dirsekleri yana çok fazla açmak.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 3 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1598971639058-fab3c3109a00?auto=format&fit=crop&w=800&q=80"
+                            alt="Barfiks demirinde sırt ve kanat kaslarını çalıştıran sporcu" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • SIRT</span>
+                        <h2 class="card-title">Lat Pulldown ve Barfiks (Sırt)</h2>
+                        <p class="card-description">
+                            Kanat (latissimus dorsi) kaslarını geliştirerek sırt genişliği sağlayan ve üst vücut çekiş
+                            kuvvetini artıran dikey çekiş hareketleridir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Göğsünü hafifçe yukarı aç, önce kürek kemiklerini aşağı
+                                indirip ardından dirseklerini beline doğru çekerek barı üst göğüs hizasına getir.</p>
+                            <p><strong>En Sık Yapılan Hata:</strong> Gövdeyi aşırı geriye yatırıp ivme kazanmak veya
+                                sırt yerine sadece ön kol ve biceps ile çekmeye çalışmak.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 4 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80"
+                            alt="Serbest ağırlık ile sırt kalınlığına yönelik çekiş antrenmanı" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • SIRT</span>
+                        <h2 class="card-title">Barbell Row (Sırt)</h2>
+                        <p class="card-description">
+                            Orta sırt, rhomboid, trapez ve kanat kaslarını aynı anda hedefleyerek sırt derinliği ve
+                            postür dayanıklılığı kazandıran temel yatay çekiş hareketidir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Dizleri hafif büküp kalçayı geriye it, sırtını tamamen düz
+                                tutarak barı göbek deliği hizasına doğru çek ve kürek kemiklerini sıkıştır.</p>
+                            <p><strong>En Sık Yapılan Hata:</strong> Alt sırtı kamburlaştırmak ve her tekrarda gövdeyi
+                                yukarı fırlatarak hareketin kontrolünü kaybetmek.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 5 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80"
+                            alt="Göğüs kaslarını hedefleyen kontrollü itiş ve üst vücut antrenmanı" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • GÖĞÜS</span>
+                        <h2 class="card-title">Bench Press ve Şınav (Göğüs)</h2>
+                        <p class="card-description">
+                            Göğüs (pektoral) kas kütlesini ve yatay itiş gücünü geliştiren, ön omuz ile arka kol
+                            kaslarını destekleyici olarak çalıştıran klasik itiş ikilisidir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Kürek kemiklerini geriye ve aşağı sabitle, dirseklerini
+                                gövdeyle yaklaşık 45 derece açıda tutarak kontrollü inip güçlü biçimde it.</p>
+                            <p><strong>En Sık Yapılan Hata:</strong> Dirsekleri 90 derece yana açarak omuz eklemine
+                                baskı bindirmek ve ağırlığı göğüsten sektirerek kaldırmak.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 6 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80"
+                            alt="Halter ile squat yaparak bacak ve kalça kaslarını çalıştıran sporcu" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • BACAK</span>
+                        <h2 class="card-title">Squat ve Lunge (Bacak)</h2>
+                        <p class="card-description">
+                            Ön bacak (quadriceps), arka bacak (hamstring) ve kalça kaslarını kapsamlı şekilde
+                            çalıştırarak alt vücut gücü ve denge kazandıran temel egzersizlerdir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Ayak tabanlarını yere tam bas, göğsünü dik tutarak kalçanı
+                                geriye ve aşağı indir; dizlerin ayak parmak uçlarıyla aynı doğrultuda kalsın.</p>
+                            <p><strong>En Sık Yapılan Hata:</strong> İniş veya kalkış sırasında dizlerin içe doğru
+                                çökmesi ve topukların yerden kesilerek yükün öne binmesi.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 7 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+                            alt="Dambıl ile kontrollü kol ve biceps curl hareketi yapan sporcu" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • KOL</span>
+                        <h2 class="card-title">Biceps Curl ve Triceps Pushdown (Kol)</h2>
+                        <p class="card-description">
+                            Ön kol (biceps) ve arka kol (triceps) kaslarını doğrudan izole ederek kol hacmini ve eklem
+                            çevresi kontrolünü artıran tamamlayıcı ikilidir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Üst kollarını ve dirseklerini gövde yanında sabit tut; tam
+                                kasılma noktasında kası sıkıp indirme fazını yavaş ve kontrollü tamamla.</p>
+                            <p><strong>En Sık Yapılan Hata:</strong> Dirsekleri öne-geriye oynatarak omuzlardan yardım
+                                almak ve ağırlığı yer çekimine bırakarak hızla indirmek.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 8 -->
+                <article class="card" data-category="egzersiz">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1566241142559-40e1dab266c6?auto=format&fit=crop&w=800&q=80"
+                            alt="Mat üzerinde doğru duruşla plank ve karın kası antrenmanı yapan sporcu"
+                            class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-exercise">EGZERSİZ • KARIN</span>
+                        <h2 class="card-title">Plank ve Hanging Leg Raise (Karın)</h2>
+                        <p class="card-description">
+                            Derin core kaslarını stabilize eden izometrik plank ile alt ve üst karın kaslarını dinamik
+                            çalıştıran asılı bacak kaldırma hareketlerinin güçlü birleşimidir.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Doğru Form:</strong> Plankta baş, omuz ve topukları tek çizgide tut; leg raise
+                                yaparken kalçayı hafifçe yukarı kıvırarak karın kaslarını sıkıştır ve nefesini düzenle.
+                            </p>
+                            <p><strong>En Sık Yapılan Hata:</strong> Plankta belin aşağı çökmesi veya asılıyken
+                                bacakları karın yerine sadece kalça fleksörleriyle sallayarak kaldırmak.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ================= 8 YÜKSEK PROTEİNLİ TARİF KARTI ================= -->
+
+                <!-- Kart 9 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=80"
+                            alt="Kremalı sos ve tavuk parçaları ile hazırlanmış yüksek proteinli makarna tabağı"
+                            class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 46g PROTEİN</span>
+                        <h2 class="card-title">Kremalı Yüksek Proteinli Tavuklu Makarna</h2>
+                        <p class="card-meta">15 dk • 46g Protein • 560 kcal</p>
+                        <p class="card-description">
+                            Ağır krema yerine süzme yoğurt ve baharatlarla kıvam alan, antrenman sonrası glikojen
+                            depolarını hızla dolduran doyurucu ana öğün.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 150g tavuk göğsü, 80g tam buğday makarna, 2 yemek kaşığı
+                                süzme yoğurt, 1 diş sarımsak, 1 tatlı kaşığı zeytinyağı, köri, karabiber.</p>
+                            <p><strong>Pratik Yapılış:</strong> Makarnayı haşlarken küp doğranmış tavukları sarımsak ve
+                                baharatla sotele. Yarım kepçe makarna suyuyla açtığın süzme yoğurdu tavaya ekleyip kısık
+                                ateşte harmanla.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 10 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80"
+                            alt="Baharatlarla fırınlanmış sulu tavuk göğsü ve yanında pilav servisi" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 48g PROTEİN</span>
+                        <h2 class="card-title">Fırında Baharatlı Tavuk Göğsü ve Pilav</h2>
+                        <p class="card-meta">20 dk • 48g Protein • 540 kcal</p>
+                        <p class="card-description">
+                            Sporcuların vazgeçilmez klasiğini kurutmadan, dışı hafif kızarmış içi sulu şekilde
+                            hazırlamanın en temiz ve yüksek proteinli yolu.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 180g tavuk göğsü, 70g basmati pirinç, 1 yemek kaşığı yoğurt,
+                                1 tatlı kaşığı zeytinyağı, kırmızı toz biber, kekik, sarımsak tozu.</p>
+                            <p><strong>Pratik Yapılış:</strong> İnce dilimlenmiş tavukları yoğurt ve baharatla
+                                harmanlayıp 200°C fırında veya airfryer'da 15 dakika pişir. Haşlanmış basmati pirinçle
+                                birlikte servis et.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 11 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=800&q=80"
+                            alt="Muz dilimleri ve fıstık ezmesiyle süslenmiş proteinli yulaf kasesi" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 34g PROTEİN</span>
+                        <h2 class="card-title">Fıstık Ezmeli ve Muzlu Proteinli Yulaf</h2>
+                        <p class="card-meta">10 dk • 34g Protein • 470 kcal</p>
+                        <p class="card-description">
+                            Sabah kahvaltısında veya antrenmandan 1 saat önce uzun süreli enerji sağlayan, kompleks
+                            karbonhidrat ve protein dengesi yüksek pratik kase.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 60g yulaf ezmesi, 200ml yarım yağlı süt, 1 ölçek protein
+                                tozu (veya 100g lor peyniri), 1 tatlı kaşığı şekersiz fıstık ezmesi, yarım muz, tarçın.
+                            </p>
+                            <p><strong>Pratik Yapılış:</strong> Yulafı sütle 4-5 dakika kıvam alana kadar pişirip
+                                ocaktan al. Hafif ılıyınca protein tozunu karıştır, üzerine dilimlenmiş muz, fıstık
+                                ezmesi ve tarçın ekle.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 12 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80"
+                            alt="Taze sebzelerle hazırlanmış protein açısından zengin fit omlet tabağı" class="card-img"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 31g PROTEİN</span>
+                        <h2 class="card-title">Sebzeli ve Yulaflı Fit Omlet</h2>
+                        <p class="card-meta">10 dk • 31g Protein • 390 kcal</p>
+                        <p class="card-description">
+                            Ekmeğe ihtiyaç bırakmayan, yüksek lif ve kaliteli yumurta proteini ile gün boyu tokluk
+                            sağlayan besleyici sporcu kahvaltısı.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 3 tam yumurta + 1 yumurta beyazı, 3 yemek kaşığı yulaf
+                                ezmesi, 50g lor peyniri, 1 avuç ıspanak, kapya biber, pul biber, 1 çay kaşığı
+                                zeytinyağı.</p>
+                            <p><strong>Pratik Yapılış:</strong> Yumurtaları yulaf, lor ve ince doğranmış sebzelerle
+                                iyice çırp. Hafif yağlanmış yapışmaz tavada kapağı kapalı şekilde iki tarafını da 3-4
+                                dakika pişir.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 13 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                            alt="Avokado dilimleri ve yeşilliklerle hazırlanmış ferah ton balıklı salata kasesi"
+                            class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 36g PROTEİN</span>
+                        <h2 class="card-title">Avokadolu ve Ton Balıklı Pratik Salata</h2>
+                        <p class="card-meta">8 dk • 36g Protein • 410 kcal</p>
+                        <p class="card-description">
+                            Ocak bile yakmadan dakikalar içinde hazırlanan, omega-3 ve sağlıklı yağlar bakımından zengin
+                            hafif ama doyurucu sporcu öğünü.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 160g süzülmüş light ton balığı, yarım olgun avokado, 3 yemek
+                                kaşığı haşlanmış nohut veya mısır, bol roka, çeri domates, yarım limon suyu.</p>
+                            <p><strong>Pratik Yapılış:</strong> Tüm yeşillikleri ve çeri domatesleri kaseye al. Küp
+                                doğranmış avokado, nohut ve süzülmüş ton balığını ekleyip limon suyu ile hafifçe
+                                harmanla.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 14 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=80"
+                            alt="Orman meyveleri ve kefirle hazırlanmış taze mor renkli protein smoothie"
+                            class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 29g PROTEİN</span>
+                        <h2 class="card-title">Kefirli ve Orman Meyveli Protein Smoothie</h2>
+                        <p class="card-meta">5 dk • 29g Protein • 320 kcal</p>
+                        <p class="card-description">
+                            Antrenman sonrasında hızlı toparlanma ve probiyotik desteği sunan, ferahlatıcı ve sindirimi
+                            son derece kolay sıvı ara öğün.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 250ml sade kefir, 1 ölçek vanilyalı veya sade protein tozu,
+                                80g donmuş yaban mersini ve böğürtlen, 1 yemek kaşığı yulaf, 1 tatlı kaşığı chia tohumu.
+                            </p>
+                            <p><strong>Pratik Yapılış:</strong> Tüm malzemeleri blender haznesine ekle ve pürüzsüz
+                                kremsi kıvam alana kadar 40 saniye çek. Soğuk olarak hemen tüket.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 15 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+                            alt="Proteinli ızgara köfte, kinoa ve renkli sebzelerden oluşan dengeli sporcu bowl"
+                            class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 42g PROTEİN</span>
+                        <h2 class="card-title">Izgara Köfte ve Kinoa Bowl</h2>
+                        <p class="card-meta">15 dk • 42g Protein • 520 kcal</p>
+                        <p class="card-description">
+                            Yağsız dana kıyma ile tam protein profiline sahip kinoayı birleştiren, yüksek demir ve
+                            kreatin destekli akşam yemeği alternatifi.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 150g yağsız dana kıyma, 60g haşlanmış kinoa, 1 yemek kaşığı
+                                yulaf unu, kimyon, karabiber, köz biber, salatalık, 2 yemek kaşığı yoğurt.</p>
+                            <p><strong>Pratik Yapılış:</strong> Kıymayı baharat ve yulaf unuyla yoğurup yassı köfteler
+                                yap, döküm tavada her iki yüzünü 4'er dakika pişir. Kinoa, sebzeler ve yoğurtla kasede
+                                buluştur.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 16 -->
+                <article class="card" data-category="tarif">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80"
+                            alt="Tam buğday ekmeği arasında lor peyniri ve yumurta ile hazırlanmış fit tost"
+                            class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-badge badge-recipe">TARİF • 32g PROTEİN</span>
+                        <h2 class="card-title">Lor Peynirli ve Yumurtalı Fit Tost</h2>
+                        <p class="card-meta">10 dk • 32g Protein • 400 kcal</p>
+                        <p class="card-description">
+                            Özellikle vakti kısıtlı öğrenciler ve çalışanlar için bütçe dostu, yüksek kazein ve yumurta
+                            proteini içeren çıtır tost alternatifi.
+                        </p>
+                        <div class="detail-box">
+                            <p><strong>Malzemeler:</strong> 2 dilim tam buğday veya ekşi mayalı tost ekmeği, 100g yağsız
+                                lor peyniri, 2 yumurta, kekik, pul biber, birkaç yaprak maydanoz.</p>
+                            <p><strong>Pratik Yapılış:</strong> Yumurtaları lor peyniri ve baharatlarla çırpıp tavada
+                                ince omlet gibi pişir. Ekmek dilimlerinin arasına yerleştirip tost makinesinde 3 dakika
+                                kızart.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Ortak Alt Bilgi (Footer) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo" aria-label="FitRehber Ana Sayfa">
+                        <span class="brand-mark" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6.5 6.5h11"></path>
+                                <path d="M6.5 17.5h11"></path>
+                                <path d="M12 6.5v11"></path>
+                                <rect x="2" y="8.5" width="3" height="7" rx="1"></rect>
+                                <rect x="19" y="8.5" width="3" height="7" rx="1"></rect>
+                            </svg>
+                        </span>
+                        <span class="brand-text">Fit<strong>Rehber</strong></span>
+                    </a>
+                    <p class="footer-description">
+                        Doğru egzersiz teknikleri ve yüksek proteinli pratik tarifleri bir araya getiren modern, hızlı
+                        ve sade spor kütüphanesi.
+                    </p>
+                </div>
+
+                <div class="footer-nav-group">
+                    <h3 class="footer-heading">Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="icerikler.html">Kütüphane</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 FitRehber. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ortak JavaScript Dosyası -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FitRehber: Spor yapanlar için doğru egzersiz formları ve 15 dakikada hazırlanan yüksek proteinli pratik tarifler kütüphanesi.">
+    <title>FitRehber | Egzersiz Formları ve Yüksek Proteinli Tarifler</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Ana Stil Dosyası -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Ortak Üst Menü (Header & Navbar) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand-logo" aria-label="FitRehber Ana Sayfa">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 6.5h11"></path>
+                        <path d="M6.5 17.5h11"></path>
+                        <path d="M12 6.5v11"></path>
+                        <rect x="2" y="8.5" width="3" height="7" rx="1"></rect>
+                        <rect x="19" y="8.5" width="3" height="7" rx="1"></rect>
+                    </svg>
+                </span>
+                <span class="brand-text">Fit<strong>Rehber</strong></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menüyü aç veya kapat"
+                aria-expanded="false" aria-controls="primaryNav">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+
+            <nav class="site-nav" id="primaryNav" aria-label="Ana Menü">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" aria-current="page">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="icerikler.html" class="nav-link">Kütüphane</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero (Üst Karşılama) Bölümü -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">SPOR &amp; BESLENME REHBERİ</span>
+                    <h1 class="hero-title">Doğru Formla Antrenman Yap, Yüksek Proteinle Beslen</h1>
+                    <p class="hero-description">
+                        Spor salonunda sakatlanmadan gelişmek ve mutfakta saatler harcamadan günlük protein hedefini
+                        tutturmak isteyenler için tasarlandı. Temel hareketlerin püf noktaları ve makro değerleri
+                        hesaplanmış pratik tarifler tek bir kütüphanede.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="icerikler.html" class="btn btn-primary">
+                            Kütüphaneyi Keşfet
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                        <a href="hakkimizda.html" class="btn btn-secondary">Nasıl Çalışır?</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-frame">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80"
+                            alt="Modern bir spor salonunda dambıl rafları ve ağırlık antrenman alanı"
+                            class="hero-image">
+                    </div>
+                    <div class="hero-floating-card" aria-label="Öne çıkan bilgi">
+                        <span class="floating-dot" aria-hidden="true"></span>
+                        <div>
+                            <strong>Sıfır Karmaşa, Net Bilgi</strong>
+                            <span>Antrenman &amp; Mutfak Tek Çatıda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Özet İstatistik Şeridi -->
+        <section class="stats-section" aria-label="FitRehber Özet Bilgileri">
+            <div class="container">
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                                <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                                <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                                <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                            </svg>
+                        </div>
+                        <div class="stat-body">
+                            <h2 class="stat-title">16+ Detaylı Kart</h2>
+                            <p class="stat-text">Adım adım anlatımlı egzersiz formları ve sporcu dostu tarifler.</p>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-body">
+                            <h2 class="stat-title">Kas Grubuna Göre Arama</h2>
+                            <p class="stat-text">Omuz, sırt, göğüs veya bacak odaklı anlık canlı filtreleme.</p>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20V10"></path>
+                                <path d="M18 20V4"></path>
+                                <path d="M6 20v-4"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-body">
+                            <h2 class="stat-title">Makro &amp; Kalori Bilgili Tarifler</h2>
+                            <p class="stat-text">Her öğünde net protein, kalori ve hazırlanma süresi detayı.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vitrin Bölümü -->
+        <section class="showcase-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-eyebrow">ÖNE ÇIKAN ÖZELLİKLER</span>
+                    <h2 class="section-title">FitRehber'de Seni Neler Bekliyor?</h2>
+                    <p class="section-subtitle">
+                        Antrenman performansını artıran teknik notlardan hızlı mutfak çözümlerine kadar ihtiyacın olan
+                        her şey düzenli kartlar halinde elinin altında.
+                    </p>
+                </header>
+
+                <div class="showcase-grid">
+                    <!-- Kart 1 -->
+                    <article class="feature-card">
+                        <div class="feature-media">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+                                alt="Spor salonunda kontrollü formla ağırlık antrenmanı yapan sporcu" loading="lazy">
+                            <span class="feature-tag">Antrenman</span>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title">Egzersiz &amp; Doğru Form Rehberi</h3>
+                            <p class="feature-description">
+                                Omuz, sırt, göğüs ve bacak hareketlerinin adım adım uygulanışını öğren; en sık yapılan
+                                form hatalarını görerek sakatlık riskini azalt.
+                            </p>
+                            <a href="icerikler.html?kategori=egzersiz" class="feature-link">
+                                Egzersizleri İncele
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Kart 2 -->
+                    <article class="feature-card">
+                        <div class="feature-media">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+                                alt="Taze sebzeler ve protein kaynağı içeren sağlıklı ve dengeli beslenme kasesi"
+                                loading="lazy">
+                            <span class="feature-tag">Beslenme</span>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title">15 Dakikada Yüksek Proteinli Tarifler</h3>
+                            <p class="feature-description">
+                                Protein ve kalori hesabı hazır, ulaşılabilir malzemelerle zahmetsizce hazırlayabileceğin
+                                antrenman öncesi ve sonrası tarifler.
+                            </p>
+                            <a href="icerikler.html?kategori=tarif" class="feature-link">
+                                Tariflere Göz At
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Kart 3 -->
+                    <article class="feature-card">
+                        <div class="feature-media">
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+                                alt="Antrenman hazırlığı için yerleştirilmiş olimpik halter barı ve ağırlık plakaları"
+                                loading="lazy">
+                            <span class="feature-tag">Hızlı Erişim</span>
+                        </div>
+                        <div class="feature-body">
+                            <h3 class="feature-title">Saniyeler İçinde Filtreleme</h3>
+                            <p class="feature-description">
+                                Arama kutusuna "Omuz", "Sırt" veya "Tavuk" yaz; kategori sekmeleriyle birlikte aradığın
+                                egzersiz ya da tarif kartı anında karşına çıksın.
+                            </p>
+                            <a href="icerikler.html" class="feature-link">
+                                Kütüphanede Ara
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Ortak Alt Bilgi (Footer) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo" aria-label="FitRehber Ana Sayfa">
+                        <span class="brand-mark" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6.5 6.5h11"></path>
+                                <path d="M6.5 17.5h11"></path>
+                                <path d="M12 6.5v11"></path>
+                                <rect x="2" y="8.5" width="3" height="7" rx="1"></rect>
+                                <rect x="19" y="8.5" width="3" height="7" rx="1"></rect>
+                            </svg>
+                        </span>
+                        <span class="brand-text">Fit<strong>Rehber</strong></span>
+                    </a>
+                    <p class="footer-description">
+                        Doğru egzersiz teknikleri ve yüksek proteinli pratik tarifleri bir araya getiren modern, hızlı
+                        ve sade spor kütüphanesi.
+                    </p>
+                </div>
+
+                <div class="footer-nav-group">
+                    <h3 class="footer-heading">Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="icerikler.html">Kütüphane</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 FitRehber. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ortak JavaScript Dosyası -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
